@@ -1,0 +1,21 @@
+@startuml
+title Estados del Vehículo
+
+[*] --> FueraDeServicio
+
+state FueraDeServicio {
+}
+
+FueraDeServicio --> EnRuta : inicia ruta
+EnRuta --> EnParada : para
+EnParada --> EnRuta : sigue la ruta
+EnRuta --> [*] : llega al destino
+EnRuta --> FueraDeServicio : incidencia
+
+state EnRuta {
+}
+
+state EnParada {
+}
+
+@enduml

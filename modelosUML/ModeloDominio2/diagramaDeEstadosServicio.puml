@@ -1,0 +1,16 @@
+@startuml
+title Estados del Servicio
+
+[*] --> Inactivo
+
+state Inactivo {
+}
+
+Inactivo --> Activo : inicia ruta
+Activo --> Inactivo : surge incidencia
+Activo --> [*] : llega al destino
+
+state Activo {
+}
+
+@enduml

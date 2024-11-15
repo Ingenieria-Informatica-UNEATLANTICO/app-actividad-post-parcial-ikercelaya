@@ -1,0 +1,72 @@
+@startuml 
+
+class Vehiculo {
+  + id: String
+  + capacidad: int
+  + tipo: String
+  + estado: String
+}
+
+class Conductor {
+  + nombre: String
+  + licencia: String
+}
+
+class Pasajero {
+  + metodoDePago: String
+  + tarjetaAbono: Tarifa
+}
+
+class Tarifa {
+  + tipoDeAbono: String
+  + precio: double
+}
+
+class Ruta {
+  + id: String
+  + horario: Horario
+  + paradas: List<Parada>
+}
+
+class Parada {
+  + ubicacion: String
+  + tiempoParada: String
+}
+
+class Horario {
+  + horaInicio: String
+  + horaFin: String
+}
+
+class Incidencia {
+  + tipo: String
+  + descripcion: String
+  + fecha: Date
+}
+
+class Flota {
+  + vehiculos: List<Vehiculo>
+  + conductores: List<Conductor>
+}
+
+class Servicio {
+  + vehiculo: Vehiculo
+  + ruta: Ruta
+}
+
+Vehiculo --> Pasajero : transporta
+Conductor --> Vehiculo : conduce
+Conductor --> Tarifa : cobra
+Pasajero --> Tarifa : paga
+Conductor --> Ruta : sigue
+Ruta --> Tarifa : varía
+Ruta --> Horario : tiene
+Ruta --> Parada : incluye
+Ruta --> Incidencia : afecta
+Flota --> Vehiculo : gestiona
+Flota --> Conductor : gestiona
+Servicio --> Vehiculo : usa
+Servicio --> Ruta : sigue
+Pasajero --> Servicio : utiliza
+
+@enduml

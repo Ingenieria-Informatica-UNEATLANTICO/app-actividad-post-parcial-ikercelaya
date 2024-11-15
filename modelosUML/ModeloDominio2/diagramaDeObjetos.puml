@@ -1,0 +1,105 @@
+@startuml
+
+' Instancia de Flota
+object flota1 {
+  vehiculos = [bus1]
+  conductores = [conductor1]
+}
+
+' Instancia de Conductor
+object conductor1 {
+  nombre = "Carlos Sánchez"
+  licencia = "L-98765"
+}
+
+' Instancia de Vehículo
+object bus1 {
+  id = "BUS-001"
+  capacidad = 50
+  tipo = "Autobús"
+  estado = "En Servicio"
+}
+
+' Instancias de Pasajero
+object pasajero1 {
+  metodoDePago = "Tarjeta"
+  tarjetaAbono = abonoMensual
+}
+
+object pasajero2 {
+  metodoDePago = "Efectivo"
+  tarjetaAbono = null
+}
+
+' Instancia de Tarifa
+object abonoMensual {
+  tipoDeAbono = "Mensual"
+  precio = 30.0
+}
+
+object tarifaUnica {
+  tipoDeAbono = "Única"
+  precio = 2.5
+}
+
+' Instancia de Ruta
+object ruta1 {
+  id = "Ruta 10"
+  horario = horario1
+  paradas = [paradaA, paradaB, paradaC]
+}
+
+' Instancias de Parada
+object paradaA {
+  ubicacion = "Parada A"
+  tiempoParada = "08:00"
+}
+
+object paradaB {
+  ubicacion = "Parada B"
+  tiempoParada = "08:15"
+}
+
+object paradaC {
+  ubicacion = "Parada C"
+  tiempoParada = "08:30"
+}
+
+' Instancia de Horario
+object horario1 {
+  horaInicio = "07:00"
+  horaFin = "12:00"
+}
+
+' Instancia de Incidencia
+object incidencia1 {
+  tipo = "Retraso"
+  descripcion = "Accidente en la vía"
+  fecha = "2024-11-15"
+}
+
+' Instancia de Servicio
+object servicio1 {
+  vehiculo = bus1
+  ruta = ruta1
+}
+
+' Relaciones entre objetos
+flota1 --> bus1 : gestiona
+flota1 --> conductor1 : gestiona
+conductor1 --> bus1 : conduce
+bus1 --> pasajero1 : transporta
+bus1 --> pasajero2 : transporta
+pasajero1 --> abonoMensual : usa
+pasajero2 --> tarifaUnica : paga
+pasajero1 --> servicio1 : utiliza
+pasajero2 --> servicio1 : utiliza
+ruta1 --> horario1 : tiene
+ruta1 --> paradaA : incluye
+ruta1 --> paradaB : incluye
+ruta1 --> paradaC : incluye
+ruta1 --> incidencia1 : afecta
+servicio1 --> bus1 : usa
+servicio1 --> ruta1 : sigue
+
+@enduml

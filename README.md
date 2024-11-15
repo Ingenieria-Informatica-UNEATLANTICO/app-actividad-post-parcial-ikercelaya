@@ -1,53 +1,38 @@
-# Repo plantilla para exámenes [PRG*x*|EDA*x*|IDSW*x*]@gII.uneatlantico
+# Respuestas del examen: 
+**[Enlace a PDF](/documents/examen.pdf)**
 
-*Este documento es una guía para la realización y entrega de las evaluaciones en las asignaturas PRGx, EDAx e IDSWx del Grado en Ingeniería Informática. Detalla la estructura del repositorio de entrega, los artefactos requeridos y los criterios de evaluación.*
+## Modelo del Dominio del examen
+### Diagrama de Clases 
+**[código](/modelosUML/ModeloDominio1/diagramaDeClases.puml)**  
+![Descripción](/images/ModeloDominio1/diagramaDeClases1.png)
 
-## Enunciado del examen
+### Diagrama de Objetos
+**[código](/modelosUML/ModeloDominio1/diagramaDeObjetos.puml)**  
+![Descripción](/images/ModeloDominio1/diagramaDeObjetos1.png)
 
-En el repo de la asignatura, carpeta `/evaluaciones`, apartado del examen correspondiente.
+### Diagrama de Estados 
+**[Estados del Conductor](/modelosUML/ModeloDominio1/diagramaDeEstadosConductor.puml)**  
 
-### Retos
+![Descripción](/images/ModeloDominio1/estadosConductor.png)
 
-Indicados dentro del enunciado del examen.
+**[Estados del Pasajero](/modelosUML/ModeloDominio1/diagramaDeEstadosPasajero.puml)**  
 
-## Entrega del examen
+![Descripción](/images/ModeloDominio1/estadosPasajero.png)
 
-En el repositorio destinado para tal fin en el examen.
+**[Estados del Vehiculo](/modelosUML/ModeloDominio1/diagramaDeEstadosVehiculo.puml)**  
 
-### Artefactos
+![Descripción](/images/ModeloDominio1/estadosVehiculo.png)
 
-A continuación una lista de artefactos que habitualmente constituyen la entrega de un examen:
+## Modelo del Dominio mejorado  
+### Diagrama de Clases  
+**[código](/modelosUML/ModeloDominio2/diagramaDeClases.puml)**  
+![Descripción](/images/ModeloDominio2/diagramaDeClases2.png)  
 
-||||
-|-|-|-|
-|1|Archivo **README.md**|**Este archivo**, sobreescrito con su presentación de la propuesta de solución al examen.|
-|2|Código fuente|Proyecto ordenado dentro de la carpeta `/src`.|
-|3|Diagramas UML|Archivos fuente en la carpeta `/modelosUML`.|
-| ||Diagramas exportados en formato .svg en la carpeta `/images`. |
-|4|Imágenes|Si considera necesario incluir imágenes además de los diagramas, deben alojarse en la carpeta `/images` y estar referenciadas en el documento de entrega.|
-| ||Para diagramas use el formato .svg y para imágenes comunes, el formato .png.|
-|5|Documentación adicional|En la carpeta `/documents`.|
+### Diagrama de Objetos  
+**[código](/modelosUML/ModeloDominio2/diagramaDeObjetos.puml)**  
+![Descripción](/images/ModeloDominio2/diagramaDeObjetos2.png)  
 
-### Qué se debe entregar
-
-- Los artefactos a entregar se indican en el examen de modo específico. Se especificará cuales son obligatorios.
-- Usted tiene la libertad de decidir si incluir o no los elementos que no sean explícitamente requeridos en el enunciado del examen. Su inclusión es facultativa y debe basarse en su criterio sobre la relevancia o aporte que estos elementos puedan tener para el trabajo presentado.
-- Todos los artefactos han de quedar adecuadamente relacionados desde el artefacto 1.
-
-## Se valorará
-
-- Proceso de creación.
-- Exactitud en la solución.
-- Adecuado reparto de responsabilidades.
-- Código limpio.
-- Claridad del código.
-- Gestión de estados.
-- Y, por supuesto, el uso de los temas vistos en clase.
-
-### Se propone/sugiere
-
-|||
-|-|-|
-|Planificación| Planifique su enfoque utilizando diagramas, esquemas, estados y/o pseudocódigo. Lo puede aportar en su repo, como diagrama o como imagen (foto), en la carpeta adecuada y enlazado desde el README.md|
-|Documentación|En dicho README.md puede explicar cómo cada parte contribuye a la solución general. Y como hemos debatido ampliamente, evite los comentarios a su código: ¡que el código se autoexplique!.|
-|Delegación de responsabilidades|Dedíquele un momento a reflexionar sobre cómo reparte las responsabilidades entre los diferentes artefactos y cómo esto afecta la claridad y eficiencia de su solución.|
+### Diagrama de Estados  
+Mantengo los 3 estados anteriores y añado el del Servicio  
+**[Estados del Servicio](/modelosUML/ModeloDominio2/diagramaDeEstadosServicio.puml)**  
+![Descripción](/images/ModeloDominio2/estadosServicio.png)
