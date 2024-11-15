@@ -1,0 +1,39 @@
+@startuml
+object Autobus {
+  tipo: Vehiculo
+}
+
+object Iván {
+  tipo: Conductor
+}
+
+object Juan {
+  tipo: Pasajero
+  metodoDePago: Efectivo
+}
+
+object Alberto {
+  tipo: Pasajero
+  metodoDePago: Abono
+}
+
+object Tarifa {
+  tipoDeAbono: 2.40€
+}
+
+object Ruta {
+  nombre: Santander - Astillero
+  horario: 09:00 - 10:00
+  paradas: Santander, Astillero
+}
+
+Autobus --> Juan : transporta
+Autobus --> Alberto : transporta
+Iván --> Autobus : conduce
+Iván --> Tarifa : cobra
+Juan --> Tarifa : paga
+Alberto --> Tarifa : paga
+Ruta --> Tarifa : influye
+Iván --> Ruta : sigue
+
+@enduml

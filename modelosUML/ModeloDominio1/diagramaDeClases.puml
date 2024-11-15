@@ -1,0 +1,28 @@
+@startuml
+class Vehiculo {
+}
+
+class Conductor {
+}
+
+class Pasajero {
+  - metodoDePago: String
+}
+
+class Tarifa {
+  - tipoDeAbono: String
+}
+
+class Ruta {
+  - horario: String
+  - paradas: List<String>
+}
+
+Vehiculo --> Pasajero : transporta
+Conductor --> Vehiculo : conduce
+Conductor --> Tarifa : cobra
+Pasajero --> Tarifa : paga
+Conductor --> Ruta : sigue
+Ruta --> Tarifa : varía
+
+@enduml

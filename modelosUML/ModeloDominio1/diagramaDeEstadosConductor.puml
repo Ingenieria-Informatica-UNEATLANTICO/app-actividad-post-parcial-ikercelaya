@@ -1,0 +1,15 @@
+@startuml
+title Estados del Conductor
+[*] --> Parado
+
+state Parado {
+}
+
+Parado --> EnConduccion : comienza la ruta
+EnConduccion --> Parado : incidencia
+EnConduccion --> [*] : llega
+
+state EnConduccion {
+}
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+title Estados del Pasajero
+
+[*] --> EnParada
+
+state EnParada {
+}
+
+EnParada --> EnPago : llega el bus
+EnPago --> EnParada : error
+EnPago --> EnTransporte : paga
+EnTransporte --> [*] : llega al destino
+
+state EnPago {
+}
+
+state EnTransporte {
+}
+
+@enduml
