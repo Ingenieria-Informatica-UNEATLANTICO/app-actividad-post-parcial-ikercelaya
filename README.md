@@ -4,7 +4,6 @@
 ## Modelo del Dominio del examen
 ### Diagrama de Clases 
 **[código](/modelosUML/ModeloDominio1/diagramaDeClases.puml)**  
-
 ![Descripción](/images/ModeloDominio1/diagramaDeClases1.png)
 
 ### Diagrama de Objetos
@@ -26,7 +25,14 @@
 
 ## Modelo del Dominio mejorado  
 ### Diagrama de Clases  
+**[código](/modelosUML/ModeloDominio2/diagramaDeClases.puml)**  
+![Descripción](/images/ModeloDominio2/diagramaDeClases2.png)  
 
 ### Diagrama de Objetos  
+**[código](/modelosUML/ModeloDominio2/diagramaDeObjetos.puml)**  
+![Descripción](/images/ModeloDominio2/diagramaDeObjetos2.png)  
 
 ### Diagrama de Estados  
+Mantengo los 3 estados anteriores y añado el del Servicio  
+**[Estados del Servicio](/modelosUML/ModeloDominio2/diagramaDeEstadosServicio.puml)**  
+![Descripción](/images/ModeloDominio2/estadosServicio.png)
