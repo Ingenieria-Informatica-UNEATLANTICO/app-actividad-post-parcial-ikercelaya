@@ -23,3 +23,10 @@
 **[Estados del Vehiculo](/modelosUML/ModeloDominio1/diagramaDeEstadosVehiculo.puml)**  
 
 ![Descripción](/images/ModeloDominio1/estadosVehiculo.png)
+
+## Modelo del Dominio mejorado  
+### Diagrama de Clases  
+
+### Diagrama de Objetos  
+
+### Diagrama de Estados  
